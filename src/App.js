@@ -1,75 +1,37 @@
-// import React from "react";
-// import Navbar from "./components/Navbar";
-// import Main from './components/Main';
-// import Sidebar1 from './components/Sidebar1';
-// import Sidebar2 from './components/Sidebar2';
-// import Footer from './components/Footer';
-// import CBCPex from "./propeexample/CBCPex";
-
-// class App extends React.Component{
-//   render(){
-//     return(
-//       <div >
-//         <Navbar/>
-//         <Main/>
-//         <div className='side'>
-//           <Sidebar1/>
-//           <Sidebar2/>
-//         </div>
-//         <Footer/>
-//         <CBCPex username = "Akshay" age = {20}
-//         hobbies = {["Cricket","T.v"]}
-//         address = {{city:"Siddipet", area :"Paripally Street"}}
-//         isMarried = {false}
-//         sendFun = {function(){alert("Hi Akshay 😍")}}
-//         />
-//       </div>
-//   )}
-// };
-
-// export default App;
-
-
-// import React from "react";
-// import FBCpropexample from './propeexample/FBCpropexample';
-// const App = () =>{
-//   return(
-//     <div>
-//       <FBCpropexample
-//       userName = "Akshay"
-//       age = {20}
-//       profiles = {["Insta", "Meta"]}
-//       />
-//     </div>
-//   )
-// }
-// export default App;
-
-// import React from 'react'
-// import PropsChildren from './propeexample/PropsChildren'
-// import SubChildProps from './propeexample/SubChildProps'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <PropsChildren userName = "Akshay" company = "Meta" >
-//       <h1>This is prop childeren...</h1>
-//       <SubChildProps/>
-//       </PropsChildren>
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-import {React} from "react";
-import RefExample from "./hookexample/RefExample";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
+import Classroom from "./pages/Classroom";
+import Assesment from "./pages/Assesment";
+import Store from "./pages/Store";
+import Calender from "./pages/Calender";
+import News from "./pages/News";
+import Blog from "./pages/Blog";
+import PageNotFound from "./pages/PageNotFound";
+import Profile from "./pages/Profile";
+import MySettings from "./pages/MySettings";
+import Myaccount from "./pages/Myaccount";
 const App = () => {
-  return(
-    <div>
-      <RefExample/>
-    </div>
+  return (
+    <BrowserRouter>
+        <Navbar/>
+        <Routes>
+           <Route path='/' element={<Dashboard/>}/>
+           <Route path='/classroom' element={<Classroom/>}/>
+           <Route path='/assesment' element={<Assesment/>}/>
+           <Route path='/store' element={<Store/>}/>
+           <Route path='/calender' element={<Calender/>}/>
+           <Route path='/news' element={<News/>}/>
+           <Route path='/blog' element={<Blog/>}/>
+           <Route path='*' element={<PageNotFound/>}/>
+           <Route path="/profile" element={<Profile/>}>
+                  <Route path="/profile/myaccount" element={<Myaccount/>}/>
+                  <Route path="/profile/mysettings" element={<MySettings/>}/>
+           </Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
-export default App;
+
+export default App
