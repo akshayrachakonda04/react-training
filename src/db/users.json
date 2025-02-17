@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "name": "Akshay Rachakonda",
+      "email": "akshay@gmail.com",
+      "phone": "9876543210",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "phone": "7896451320"
+    },
+    {
+      "id": "3",
+      "name": "sita",
+      "email": "sita@gmail.com",
+      "phone": "913254789"
+    },
+    {
+      "id": "40f0",
+      "name": "Laxman",
+      "email": "laxman@gmail.com",
+      "phone": "9874563123"
+    },
+    {
+      "id": "7647",
+      "name": "Hanuman",
+      "email": "hanuman@gmail.com",
+      "phone": "7898454231"
+    },
+    {
+      "id": "1da1",
+      "name": "Krishna",
+      "email": "krishna@gmail.com",
+      "phone": "1235648711"
+    }
+  ]
+}
